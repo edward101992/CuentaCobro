@@ -5,7 +5,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
+<html  xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
@@ -22,12 +22,36 @@ and open the template in the editor.
             <h:outputText value="Apellido Empleado :"/>
             <h:inputText value="#{cuenta.apellido}" required="true" requiredMessage="Debe insertar su Apellido"/> 
             <br></br><br></br>
-            <h:outputText value="Genero" />
+            <h:outputText value="Genero  :" />
             <h:selectOneRadio value="#{reporte.genero}" >
                 <f:selectItem itemValue="1" itemLabel="Hombre" />
                 <f:selectItem itemValue="2" itemLabel="Mujer" />
+                <f:selectItem itemValue="3" itemLabel="Otro" />
             </h:selectOneRadio>
-  
+            <br></br><br></br>
+            <h:outputText value="Profesion  :  " />
+            <h:selectOneMenu value = "#{reporte.profesion}"> 
+                <f:selectItem itemValue = "1" itemLabel = "Ingeniero" /> 
+                <f:selectItem itemValue = "2" itemLabel = "Tecnologo" /> 
+                <f:selectItem itemValue = "3" itemLabel = "Tecnico" /> 
+                <f:selectItem itemValue = "4" itemLabel = "Auxiliar" /> 
+            </h:selectOneMenu> 
+            <br></br><br></br>
+            <h:outputText value="Idioma  :  " />
+            <h:selectManyCheckbox value="#{reporte.idioma}" >
+                <f:selectItem itemValue="1" itemLabel="Ingles" />
+                <f:selectItem itemValue="2" itemLabel="Frances" />
+                <f:selectItem itemValue="3" itemLabel="Aleman" />
+            </h:selectManyCheckbox>
+            <br></br><br></br>
+            <h:outputText value="Ubicacion  :  " />
+            <h:selectOneRadio value="#{reporte.ubicacion}" >
+                <f:selectItem itemValue="1" itemLabel="Facatativa" />
+                <f:selectItem itemValue="2" itemLabel="Afueras" />
+            </h:selectOneRadio>
+            <br></br><br></br>
+            <h:outputText value="Dias Trabajados :" />
+            <h:inputText value="#{reporte.diasTrabajo}" converterMessage="Digite solo numeros" required="true" requiredMessage="Debe insertar los dias trabajados"/>
             <h:commandButton value="GENERAR" action="reporte" />
             <h:commandButton value="LIMPIAR" type="reset" />
         </h:form>    

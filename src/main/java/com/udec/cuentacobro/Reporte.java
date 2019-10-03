@@ -20,25 +20,16 @@ public class Reporte {
 
    
    private int profesion;
-   private int idioma;
    private int ubicacion;
    private int genero;
    private int diasTrabajo;
-
+   private int[] idioma;
     public int getProfesion() {
         return profesion;
     }
 
     public void setProfesion(int profesion) {
         this.profesion = profesion;
-    }
-
-    public int getIdioma() {
-        return idioma;
-    }
-
-    public void setIdioma(int idioma) {
-        this.idioma = idioma;
     }
 
     public int getUbicacion() {
@@ -64,6 +55,15 @@ public class Reporte {
     public void setDiasTrabajo(int diasTrabajo) {
         this.diasTrabajo = diasTrabajo;
     }
+
+    public int[] getIdioma() {
+        return idioma;
+    }
+
+    public void setIdioma(int[] idioma) {
+        this.idioma = idioma;
+    }
+    
     
     public Reporte() {
     }
