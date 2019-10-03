@@ -68,6 +68,35 @@ public class Reporte {
     public Reporte() {
     }
     
+    public String devolverProfesion(){
+        String prof;     
+        if(profesion==1){
+            prof="Ingeniero";       
+        }else if(profesion==2){
+            prof="Tecnico";
+        }else if(profesion==3){
+            prof="Tecnologo";
+        }else{
+            prof="Auxiliar";
+        }
+        return prof;
+    }
+    
+    public void devolverIdioma(){
+    
+    }
+    
+    public String devolverUbicacion(){ 
+        String ubi;
+        if(ubicacion==1){
+            ubi = "Facatativa";
+        }else{
+            ubi="Afueras";
+        }
+        return ubi;
+    }
+    
+    
     public String devolverGenero(){ 
         String gen;
         if(genero==1){
@@ -79,5 +108,6 @@ public class Reporte {
         }
         return gen;
     }
+        
     
 }

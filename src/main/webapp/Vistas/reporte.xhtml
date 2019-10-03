@@ -15,7 +15,15 @@ and open the template in the editor.
     <h:body>
         <h:form>          
             <h:outputLabel>
-                #{cuenta.reporte.devolverGenero()} #{cuenta.nombre} #{cuenta.apellido}         
+                #{cuenta.reporte.devolverGenero()} #{cuenta.nombre} #{cuenta.apellido}
+                <br></br>
+                por su profesion : #{cuenta.reporte.devolverProfesion()}
+                <br></br>
+                y sus idiomas : 
+                <br></br>
+                su ubicacion es : #{cuenta.reporte.devolverUbicacion} y los 
+                <br></br>
+                dias trabajados son #{cuenta.reporte.diasTrabajo}
             </h:outputLabel>
             <h:outputLabel />
         </h:form>
