@@ -18,7 +18,6 @@ import javax.enterprise.context.RequestScoped;
 @RequestScoped
 public class Reporte {
 
-   
    private int profesion;
    private int ubicacion;
    private int genero;
@@ -69,7 +68,8 @@ public class Reporte {
     }
     
     public String devolverProfesion(){
-        String prof;     
+        String prof="asas"; 
+        /*
         if(profesion==1){
             prof="Ingeniero";       
         }else if(profesion==2){
@@ -79,6 +79,7 @@ public class Reporte {
         }else{
             prof="Auxiliar";
         }
+                */
         return prof;
     }
     
@@ -87,12 +88,12 @@ public class Reporte {
     }
     
     public String devolverUbicacion(){ 
-        String ubi;
+        String ubi;      
         if(ubicacion==1){
             ubi = "Facatativa";
         }else{
             ubi="Afueras";
-        }
+        }           
         return ubi;
     }
     

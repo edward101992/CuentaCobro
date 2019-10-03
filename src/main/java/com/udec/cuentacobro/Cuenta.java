@@ -64,4 +64,8 @@ public class Cuenta {
     public Cuenta() {
     }
     
+    public void me(){
+    
+    }
+    
 }
