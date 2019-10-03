@@ -23,8 +23,12 @@ public class Cuenta {
   
     private String nombre;
     private String apellido;
+    private int profesion;
+    private int ubicacion;
     private int genero;
-
+    private int diasTrabajo;
+    private String[] idioma;
+    
     @Inject
     private Reporte reporte;
 
@@ -40,8 +44,6 @@ public class Cuenta {
         this.logica = logica;
     }
     
-    
-    
     public Reporte getReporte() {
         return reporte;
     }
@@ -50,15 +52,7 @@ public class Cuenta {
         this.reporte = reporte;
     }
       
-    
-    public int getGenero() {
-        return genero;
-    }
-
-    public void setGenero(int genero) {
-        this.genero = genero;
-    }
-    
+   
     public String getNombre() {
         return nombre;
     }
@@ -74,10 +68,55 @@ public class Cuenta {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
+
+    public int getProfesion() {
+        return profesion;
+    }
+
+    public void setProfesion(int profesion) {
+        this.profesion = profesion;
+    }
+
+    public int getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(int ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
+    public int getGenero() {
+        return genero;
+    }
+
+    public void setGenero(int genero) {
+        this.genero = genero;
+    }
+
+    public int getDiasTrabajo() {
+        return diasTrabajo;
+    }
+
+    public void setDiasTrabajo(int diasTrabajo) {
+        this.diasTrabajo = diasTrabajo;
+    }
+
+    public String[] getIdioma() {
+        return idioma;
+    }
+
+    public void setIdioma(String[] idioma) {
+        this.idioma = idioma;
+    }
     
+    public String generar(){
+        return "reporte";
+    }
     
     public Cuenta() {
     }
+
+ 
     
     
 }

@@ -25,6 +25,9 @@ public class Logica {
     @Inject
     private Cuenta cuenta;
 
+    public Logica() {
+    }
+    
     public Reporte getReporte() {
         return reporte;
     }
@@ -40,22 +43,51 @@ public class Logica {
     public void setCuenta(Cuenta cuenta) {
         this.cuenta = cuenta;
     }
-
     
-
-    public Logica(Reporte reporte, Cuenta cuenta){
-        
+    public Logica(Reporte reporte, Cuenta cuenta){       
         this.cuenta = cuenta;
-        this.reporte = reporte;
-        
+        this.reporte = reporte;       
+    }
+      
+    
+    public String devolverProfesion(){
+        int idprof=cuenta.getProfesion();
+        String prof="prof"; 
+        if(idprof==1){
+            prof="Ingeniero";       
+        }else if(idprof==2){
+            prof="Tecnico";
+        }else if(idprof==3){
+            prof="Tecnologo";
+        }else{
+            prof="Auxiliar";
+        }
+        return prof;
+    }
+    public String devolverUbicacion(){ 
+        int idubi = cuenta.getUbicacion();
+        String ubi="ubi";      
+        if(idubi==1){
+            ubi = "Facatativa";
+        }else{
+            ubi="Afueras";
+        }           
+        return ubi;
     }
     
-    public int cobroFinal(){
-        return reporte.getDiasTrabajo();
+     public String devolverGenero(){ 
+        int idgen = cuenta.getGenero();
+        String gen="gen";
+        if(idgen==1){
+           gen ="Señor :";
+        }else if(idgen==2){
+            gen="Señora :";
+        }else{
+            gen="Señor@";
+        }
+        return gen;
     }
+     
     
-    
-    public Logica() {
-    }
     
 }

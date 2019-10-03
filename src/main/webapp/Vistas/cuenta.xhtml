@@ -23,14 +23,14 @@ and open the template in the editor.
             <h:inputText value="#{cuenta.apellido}" required="true" requiredMessage="Debe insertar su Apellido"/> 
             <br></br><br></br>
             <h:outputText value="Genero  :" />
-            <h:selectOneRadio value="#{reporte.genero}" >
+            <h:selectOneRadio value="#{cuenta.genero}" >
                 <f:selectItem itemValue="1" itemLabel="Hombre" />
                 <f:selectItem itemValue="2" itemLabel="Mujer" />
                 <f:selectItem itemValue="3" itemLabel="Otro" />
             </h:selectOneRadio>
             <br></br><br></br>
             <h:outputText value="Profesion  :  " />
-            <h:selectOneMenu value = "#{reporte.profesion}"> 
+            <h:selectOneMenu value = "#{cuenta.profesion}"> 
                 <f:selectItem itemValue = "1" itemLabel = "Ingeniero" /> 
                 <f:selectItem itemValue = "2" itemLabel = "Tecnologo" /> 
                 <f:selectItem itemValue = "3" itemLabel = "Tecnico" /> 
@@ -38,22 +38,22 @@ and open the template in the editor.
             </h:selectOneMenu> 
             <br></br><br></br>
             <h:outputText value="Idioma  :  " />
-            <h:selectManyCheckbox value="#{reporte.idioma}" >
+            <h:selectManyCheckbox value="#{cuenta.idioma}" >
                 <f:selectItem itemValue="Ingles" itemLabel="Ingles" />
                 <f:selectItem itemValue="Frances" itemLabel="Frances" />
                 <f:selectItem itemValue="Aleman" itemLabel="Aleman" />
             </h:selectManyCheckbox>
             <br></br><br></br>
             <h:outputText value="Ubicacion  :  " />
-            <h:selectOneRadio value="#{reporte.ubicacion}" >
+            <h:selectOneRadio value="#{cuenta.ubicacion}" >
                 <f:selectItem itemValue="1" itemLabel="Facatativa" itemDescription="de" />
                 <f:selectItem itemValue="2" itemLabel="Afueras" />
             </h:selectOneRadio>
             <br></br><br></br>
             <h:outputText value="Dias Trabajados :" />
-            <h:inputText value="#{reporte.diasTrabajo}" converterMessage="Digite solo numeros" required="true" requiredMessage="Debe insertar los dias trabajados"/>
+            <h:inputText value="#{cuenta.diasTrabajo}" converterMessage="Digite solo numeros" required="true" requiredMessage="Debe insertar los dias trabajados"/>
             <br></br><br></br>
-            <h:commandButton value="GENERAR" action="#{principal.calcular()}" />
+            <h:commandButton value="GENERAR" action="#{cuenta.generar()}" />
             <h:commandButton value="LIMPIAR" type="reset" />
         </h:form>    
     </h:body>
