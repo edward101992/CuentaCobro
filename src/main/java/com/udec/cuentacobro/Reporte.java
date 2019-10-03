@@ -69,7 +69,6 @@ public class Reporte {
     
     public String devolverProfesion(){
         String prof="asas"; 
-        /*
         if(profesion==1){
             prof="Ingeniero";       
         }else if(profesion==2){
@@ -79,7 +78,6 @@ public class Reporte {
         }else{
             prof="Auxiliar";
         }
-                */
         return prof;
     }
     
