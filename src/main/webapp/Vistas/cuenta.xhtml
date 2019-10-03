@@ -39,21 +39,21 @@ and open the template in the editor.
             <br></br><br></br>
             <h:outputText value="Idioma  :  " />
             <h:selectManyCheckbox value="#{reporte.idioma}" >
-                <f:selectItem itemValue="1" itemLabel="Ingles" />
-                <f:selectItem itemValue="2" itemLabel="Frances" />
-                <f:selectItem itemValue="3" itemLabel="Aleman" />
+                <f:selectItem itemValue="Ingles" itemLabel="Ingles" />
+                <f:selectItem itemValue="Frances" itemLabel="Frances" />
+                <f:selectItem itemValue="Aleman" itemLabel="Aleman" />
             </h:selectManyCheckbox>
             <br></br><br></br>
             <h:outputText value="Ubicacion  :  " />
             <h:selectOneRadio value="#{reporte.ubicacion}" >
-                <f:selectItem itemValue="1" itemLabel="Facatativa" />
+                <f:selectItem itemValue="1" itemLabel="Facatativa" itemDescription="de" />
                 <f:selectItem itemValue="2" itemLabel="Afueras" />
             </h:selectOneRadio>
             <br></br><br></br>
             <h:outputText value="Dias Trabajados :" />
             <h:inputText value="#{reporte.diasTrabajo}" converterMessage="Digite solo numeros" required="true" requiredMessage="Debe insertar los dias trabajados"/>
             <br></br><br></br>
-            <h:commandButton value="GENERAR" action="reporte" />
+            <h:commandButton value="GENERAR" action="#{principal.calcular()}" />
             <h:commandButton value="LIMPIAR" type="reset" />
         </h:form>    
     </h:body>

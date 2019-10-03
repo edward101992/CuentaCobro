@@ -8,6 +8,7 @@ package com.udec.cuentacobro;
 import javax.inject.Named;
 //import javax.inject.Inject;
 import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 
 /**
  *
@@ -22,7 +23,27 @@ public class Reporte {
    private int ubicacion;
    private int genero;
    private int diasTrabajo;
-   private int[] idioma;
+   private String[] idioma;
+   
+    @Inject
+    private Principal principal;
+
+    public Principal getPrincipal() {
+        return principal;
+    }
+
+    public void setPrincipal(Principal principal) {
+        this.principal = principal;
+    }
+
+    public String[] getIdioma() {
+        return idioma;
+    }
+
+    public void setIdioma(String[] idioma) {
+        this.idioma = idioma;
+    }
+    
     public int getProfesion() {
         return profesion;
     }
@@ -54,21 +75,14 @@ public class Reporte {
     public void setDiasTrabajo(int diasTrabajo) {
         this.diasTrabajo = diasTrabajo;
     }
-
-    public int[] getIdioma() {
-        return idioma;
-    }
-
-    public void setIdioma(int[] idioma) {
-        this.idioma = idioma;
-    }
     
     
     public Reporte() {
+        
     }
     
     public String devolverProfesion(){
-        String prof="asas"; 
+        String prof; 
         if(profesion==1){
             prof="Ingeniero";       
         }else if(profesion==2){
@@ -80,11 +94,8 @@ public class Reporte {
         }
         return prof;
     }
-    
-    public void devolverIdioma(){
-    
-    }
-    
+        
+
     public String devolverUbicacion(){ 
         String ubi;      
         if(ubicacion==1){

@@ -5,10 +5,11 @@
  */
 package com.udec.cuentacobro;
 
+import com.udec.logica.Logica;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
-//import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.ApplicationScoped;
 
 /**
  *
@@ -27,6 +28,20 @@ public class Cuenta {
     @Inject
     private Reporte reporte;
 
+    
+    @Inject
+    private Logica logica;
+
+    public Logica getLogica() {
+        return logica;
+    }
+
+    public void setLogica(Logica logica) {
+        this.logica = logica;
+    }
+    
+    
+    
     public Reporte getReporte() {
         return reporte;
     }
@@ -64,8 +79,5 @@ public class Cuenta {
     public Cuenta() {
     }
     
-    public void me(){
-    
-    }
     
 }
