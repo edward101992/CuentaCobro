@@ -6,20 +6,36 @@
 package com.udec.cuentacobro;
 
 import javax.inject.Named;
-//import javax.enterprise.context.RequestScoped;
-import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
+//import javax.enterprise.context.ApplicationScoped;
 
 /**
  *
  * @author SuperUs
  */
-@Named(value = "cuenta")
-@ApplicationScoped
+//@Named(value = "cuenta")
+//@ApplicationScoped
+@Named
+@RequestScoped
 public class Cuenta {
+  
     private String nombre;
     private String apellido;
     private int genero;
 
+    @Inject
+    private Reporte reporte;
+
+    public Reporte getReporte() {
+        return reporte;
+    }
+
+    public void setReporte(Reporte reporte) {
+        this.reporte = reporte;
+    }
+      
+    
     public int getGenero() {
         return genero;
     }
@@ -42,18 +58,6 @@ public class Cuenta {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
-    }
-    
-    public String devolverGenero(){ 
-        String gen;
-        if(genero==1){
-           gen ="Señor :";
-        }else if(genero==2){
-            gen="Señora :";
-        }else{
-            gen="Señor@";
-        }
-        return gen;
     }
     
     

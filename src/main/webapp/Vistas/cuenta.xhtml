@@ -23,10 +23,11 @@ and open the template in the editor.
             <h:inputText value="#{cuenta.apellido}" required="true" requiredMessage="Debe insertar su Apellido"/> 
             <br></br><br></br>
             <h:outputText value="Genero" />
-            <h:selectOneRadio value="#{cuenta.genero}" >
+            <h:selectOneRadio value="#{reporte.genero}" >
                 <f:selectItem itemValue="1" itemLabel="Hombre" />
                 <f:selectItem itemValue="2" itemLabel="Mujer" />
             </h:selectOneRadio>
+  
             <h:commandButton value="GENERAR" action="reporte" />
             <h:commandButton value="LIMPIAR" type="reset" />
         </h:form>    
