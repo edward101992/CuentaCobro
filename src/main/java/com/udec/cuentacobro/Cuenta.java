@@ -103,31 +103,52 @@ public class Cuenta {
     public void setUbicacion(int ubicacion) {
         this.ubicacion = ubicacion;
     }
-
+    /**
+     * get variable genero
+     * @return genero
+     */
     public int getGenero() {
         return genero;
     }
-
+   /**
+    * set variable genero
+    * @param genero 
+    */
     public void setGenero(int genero) {
         this.genero = genero;
     }
-
+    /**
+     * get variable diasTrabajo
+     * @return diasTrabajo
+     */
     public int getDiasTrabajo() {
         return diasTrabajo;
     }
-
+    /**
+     * set variable diasTrabajo
+     * @param diasTrabajo 
+     */
     public void setDiasTrabajo(int diasTrabajo) {
         this.diasTrabajo = diasTrabajo;
     }
-
+    /**
+     * get variable idioma
+     * @return idioma
+     */
     public String[] getIdioma() {
         return idioma;
     }
-
+    /**
+     * set variable idioma
+     * @param idioma 
+     */
     public void setIdioma(String[] idioma) {
         this.idioma = idioma;
     }
-    
+    /**
+     * metodo que genera reporte
+     * @return reporte
+     */
     public String generar(){
         return "reporte";
     }
