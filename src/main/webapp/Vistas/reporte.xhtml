@@ -13,35 +13,76 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
     <h:body>
-        <h:form>          
-            <h:outputLabel>
-                #{reporte.pintarGenero()} #{cuenta.nombre} #{cuenta.apellido}
+        <h:form>     
+            <font style="color:rgb(255,0,0);">             
+            <h1 align="center">Reporte</h1>
+            <hr></hr> 
+            </font>
+             <div align="center">
+                 
+                <font style="color:rgb(24,127,194);">        
+                <h:outputLabel> #{reporte.pintarGenero()} </h:outputLabel>
+                </font>
+                #{cuenta.nombre} #{cuenta.apellido} 
                 <br></br>
-                por su profesion : #{reporte.pintarProfesion()}
+                
+                <font style="color:rgb(24,127,194);"> 
+                <h:outputLabel> profesion : </h:outputLabel>
+                </font>
+                #{reporte.pintarProfesion()}        
                 <br></br>
-                y sus idiomas : 
+                
+                <font style="color:rgb(24,127,194);"> 
+                <h:outputLabel>Lenguas que habla: </h:outputLabel>
+                </font>
                 <ul>
                     <ui:repeat var="idiomas" value="#{cuenta.idioma}">
-                        <li>#{idiomas}</li>    
-                    </ui:repeat>
-                    
+                        #{idiomas} 
+                    </ui:repeat>             
                 </ul>
                 <br></br>
-                Ubicacion es : #{reporte.pintarUbicacion()} 
+                
+                <font style="color:rgb(24,127,194);"> 
+                <h:outputLabel>Ubicacion es : </h:outputLabel>
+                </font>
+                #{reporte.pintarUbicacion()} 
                 <br></br>
-                Los dias trabajados son #{cuenta.diasTrabajo}
-                <br></br>
-                Cobro por Profesion : #{reporte.pintarCobroProfesion()} pesos
-                <br></br>
-                Cobro por idioma : #{reporte.pintarCobroIdioma()} pesos
-                <br></br>
-                Cobro por ubicacion : #{reporte.pintarCobroUbicacion()} pesos
+                
+                <font style="color:rgb(24,127,194);"> 
+                <h:outputLabel>Los dias trabajados son : </h:outputLabel>
+                </font>
+                #{cuenta.diasTrabajo}
                 <br></br>
                 <br></br>
-                Su liquidacion total es #{reporte.pintarCobroFinal()} pesos
-              
-            </h:outputLabel>
-            <h:outputLabel />
+                <hr></hr> 
+                <br></br>
+                <font style="color:rgb(245, 26, 9 );"> 
+                <h:outputLabel>Cobro por Profesion : </h:outputLabel>
+                </font>
+                #{reporte.pintarCobroProfesion()} pesos
+                <br></br>
+                
+                <font style="color:rgb(245, 26, 9 );"> 
+                <h:outputLabel>Cobro por idioma : </h:outputLabel>
+                </font>
+                #{reporte.pintarCobroIdioma()} pesos
+                <br></br>
+                
+                <font style="color:rgb(245, 26, 9 );"> 
+                <h:outputLabel>Cobro por ubicacion : </h:outputLabel>
+                </font>
+                #{reporte.pintarCobroUbicacion()} pesos
+                <br></br>
+                <br></br>
+                
+                <font style="color:rgb(245, 26, 9 );"> 
+                    <h3>
+                <h:outputLabel>Su liquidacion total es : </h:outputLabel>
+                </h3>    
+                </font>
+                #{reporte.pintarCobroFinal()} pesos
+                
+             </div>
         </h:form>
     </h:body>
 </html>

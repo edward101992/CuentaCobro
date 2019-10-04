@@ -13,23 +13,36 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
     <h:body>
-        <h:form>
+        <h:form >
+            <font style="color:rgb(255,0,0);">
+               
+            <h1 align="center">Empleado</h1>
+            <hr></hr> 
+            </font>
+           
             <br></br>
             <br></br>
+            <div align="center">
             <h:outputText value="Nombre Empleado :"/>
             <h:inputText value="#{cuenta.nombre}" required="true" requiredMessage="Debe insertar su Nombre"/> 
-            <br></br><br></br><br></br>
+            <br></br><br></br><br></br>          
             <h:outputText value="Apellido Empleado :"/>
             <h:inputText value="#{cuenta.apellido}" required="true" requiredMessage="Debe insertar su Apellido"/> 
             <br></br><br></br>
+            <font style="color:rgb(24,127,194);">
             <h:outputText value="Genero  :" />
+            </font>
             <h:selectOneRadio value="#{cuenta.genero}" >
                 <f:selectItem itemValue="1" itemLabel="Hombre" />
                 <f:selectItem itemValue="2" itemLabel="Mujer" />
                 <f:selectItem itemValue="3" itemLabel="Otro" />
             </h:selectOneRadio>
-            <br></br><br></br>
+            <br></br>
+            <font style="color:rgb(24,127,194);">
             <h:outputText value="Profesion  :  " />
+            </font>
+            <br></br>
+            <br></br>
             <h:selectOneMenu value = "#{cuenta.profesion}"> 
                 <f:selectItem itemValue = "1" itemLabel = "Ingeniero" /> 
                 <f:selectItem itemValue = "2" itemLabel = "Tecnologo" /> 
@@ -37,14 +50,18 @@ and open the template in the editor.
                 <f:selectItem itemValue = "4" itemLabel = "Auxiliar" /> 
             </h:selectOneMenu> 
             <br></br><br></br>
+            <font style="color:rgb(24,127,194);">
             <h:outputText value="Idioma  :  " />
+            </font>
             <h:selectManyCheckbox value="#{cuenta.idioma}" >
                 <f:selectItem itemValue="Ingles" itemLabel="Ingles" />
                 <f:selectItem itemValue="Frances" itemLabel="Frances" />
                 <f:selectItem itemValue="Aleman" itemLabel="Aleman" />
             </h:selectManyCheckbox>
             <br></br><br></br>
+            <font style="color:rgb(24,127,194);">
             <h:outputText value="Ubicacion  :  " />
+            </font>
             <h:selectOneRadio value="#{cuenta.ubicacion}" >
                 <f:selectItem itemValue="1" itemLabel="Facatativa" itemDescription="de" />
                 <f:selectItem itemValue="2" itemLabel="Afueras" />
@@ -52,9 +69,10 @@ and open the template in the editor.
             <br></br><br></br>
             <h:outputText value="Dias Trabajados :" />
             <h:inputText value="#{cuenta.diasTrabajo}" converterMessage="Digite solo numeros" required="true" requiredMessage="Debe insertar los dias trabajados"/>
-            <br></br><br></br>
+            <br></br><br></br><br></br>
             <h:commandButton value="GENERAR" action="#{cuenta.generar()}" />
-            <h:commandButton value="LIMPIAR" type="reset" />
+            </div>
+            
         </h:form>    
     </h:body>
 </html>
