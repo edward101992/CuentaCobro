@@ -26,8 +26,8 @@ import javax.inject.Inject;
 public class Logica {
 /**
  * variables privadas de 
- * la cuenta y el reporte
- * 
+ * la cuenta y el reporte de
+ * tipo Inject
  */
     @Inject
     private Reporte reporte;
