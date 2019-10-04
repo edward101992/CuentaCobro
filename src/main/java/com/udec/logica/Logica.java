@@ -111,7 +111,7 @@ public class Logica {
         }
         return gen;
     }
-       /**
+     /**
      * Metodo que devuelve un String segun el tipo de profesion
      * del empleado
      * @return profesioncobro
@@ -129,7 +129,11 @@ public class Logica {
         }
         return profesioncobro;
     }
-    
+       /**
+     * Metodo que devuelve un String segun el tipo de Idioma
+     * del empleado
+     * @return idiomacobro
+     */
     public int cobroIdioma(){
         int idiomacobro;
         if(cuenta.getIdioma().length==1){
