@@ -33,43 +33,73 @@ public class Cuenta {
     
     @Inject
     private Logica logica;
-
+    /**
+     *get variable logica
+     * @return logica
+     */
     public Logica getLogica() {
         return logica;
     }
-
+    /**
+     * set variable logica
+     * @param logica 
+     */
     public void setLogica(Logica logica) {
         this.logica = logica;
     }
-      
+      /**
+       * get variable nombre
+       * @return nombre
+       */
     public String getNombre() {
         return nombre;
     }
-
+    /**
+     * set variable nombre
+     * @param nombre 
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    /**
+     * get variable apellido
+     * @return apellido
+     */
     public String getApellido() {
         return apellido;
     }
-
+    /**
+     * set variable apellido
+     * @param apellido  
+     */
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
-
+    /**
+     * get variable profesion 
+     * @return profesion
+     */
     public int getProfesion() {
         return profesion;
     }
-
+    /**
+     * set variable profesion
+     * @param profesion 
+     */
     public void setProfesion(int profesion) {
         this.profesion = profesion;
     }
-
+    /**
+     * get variable ubicacion
+     * @return ubicacion
+     */
     public int getUbicacion() {
         return ubicacion;
     }
-
+    /**
+     * set variable ubiacion
+     * @param ubicacion 
+     */
     public void setUbicacion(int ubicacion) {
         this.ubicacion = ubicacion;
     }
@@ -101,7 +131,9 @@ public class Cuenta {
     public String generar(){
         return "reporte";
     }
-    
+    /**
+     * Constructor de la clase Cuenta
+     */
     public Cuenta() {
     }
 
