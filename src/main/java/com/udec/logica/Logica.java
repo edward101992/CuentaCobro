@@ -88,6 +88,47 @@ public class Logica {
         return gen;
     }
      
+    public int cobroProfesion(){
+        int profesioncobro;
+        if(cuenta.getProfesion()==1){
+            profesioncobro = 200000;
+        }else if(cuenta.getProfesion()==2){
+            profesioncobro=150000;
+        }else if(cuenta.getProfesion()==3){
+            profesioncobro=100000;
+        }else{
+            profesioncobro=50000;
+        }
+        return profesioncobro;
+    }
     
+    public int cobroIdioma(){
+        int idiomacobro;
+        if(cuenta.getIdioma().length==1){
+            idiomacobro=20000;
+        }else if(cuenta.getIdioma().length==2){
+            idiomacobro=40000;
+        }else if(cuenta.getIdioma().length==2){
+             idiomacobro=60000;
+        }else{
+            idiomacobro=0;
+        }
+        return idiomacobro;
+    }
     
+    public int cobroUbicacion(){
+        int ubicacioncobro;
+        if(cuenta.getUbicacion()==2){
+            ubicacioncobro=80000;
+        }else{
+            ubicacioncobro=0;
+        }
+        return ubicacioncobro;
+    }
+    
+    public int cobroFinal(){
+        int cobrofinal;
+        cobrofinal=cuenta.getDiasTrabajo()*(cobroProfesion()+cobroIdioma()+cobroUbicacion());
+        return cobrofinal;
+    }
 }

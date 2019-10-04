@@ -51,6 +51,25 @@ public class Reporte {
         return ubicacion;
     }
     
+    public int pintarCobroIdioma(){
+        int cobro=logica.cobroIdioma();
+        return cobro;
+    }
+    
+    public int pintarCobroProfesion(){
+        int cobro=logica.cobroProfesion();
+        return cobro;
+    }
+    
+    public int pintarCobroUbicacion(){
+        int cobro=logica.cobroUbicacion();
+        return cobro;
+    }
+    
+    public int pintarCobroFinal(){
+        int cobro = logica.cobroFinal();
+        return cobro;
+    }
     public Reporte() {
     }
    
