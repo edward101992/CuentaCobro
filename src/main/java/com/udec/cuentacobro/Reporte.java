@@ -34,14 +34,14 @@ public class Reporte {
         this.logica = logica;
     }
     /**
-     * get logica
-     * @return 
+     * variable get logica
+     * @return logica
      */
     public Logica getLogica() {
         return logica;
     }
     /**
-     * set logica
+     * variable set logica
      * @param logica 
      */
     public void setLogica(Logica logica) {
@@ -50,7 +50,7 @@ public class Reporte {
     /**
      * este metodo imprime el genero
      * segun lo elijan
-     * @return 
+     * @return genero
      */
     public String pintarGenero(){
         String genero = logica.devolverGenero(); 
@@ -59,7 +59,7 @@ public class Reporte {
     /**
      * este metodo imprime la profesion
      * de cada persona
-     * @return 
+     * @return profesion
      */
     public String pintarProfesion(){
         String profesion = logica.devolverProfesion();
@@ -68,7 +68,7 @@ public class Reporte {
     /**
      * este metodo imprime el pago 
      * segun la ubicacion
-     * @return 
+     * @return ubicacion
      */
     public String pintarUbicacion(){
         String ubicacion = logica.devolverUbicacion();
@@ -77,7 +77,7 @@ public class Reporte {
     /**
      * este metodo imprime el idioma segun el o 
      * los  idiomas
-     * @return 
+     * @return cobro
      */
     public int pintarCobroIdioma(){
         int cobro=logica.cobroIdioma();
@@ -86,7 +86,7 @@ public class Reporte {
     /**
      * este metodo imprime el cobro
      * segun la profesion
-     * @return 
+     * @return cobro
      */
     public int pintarCobroProfesion(){
         int cobro=logica.cobroProfesion();
@@ -95,7 +95,7 @@ public class Reporte {
     /**
      * Este metodo imprime el 
      * resultado de cobroubicacion
-     * @return 
+     * @return cobro
      */
     public int pintarCobroUbicacion(){
         int cobro=logica.cobroUbicacion();
