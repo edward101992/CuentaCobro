@@ -12,13 +12,23 @@ import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 
 /**
- *
- * @author SuperUs
+ * esta clase hace los calculos 
+ * del reporte y la cuenta
+ * y el mensaje para 
+ * la persona segun 
+ * la ubicacion profesion 
+ * y los idiomas
+ * @author Edward Ramos
+ * @author Victor Preciado
  */
 @Named(value = "logica")
 @Dependent
 public class Logica {
-
+/**
+ * variables privadas de 
+ * la cuenta y el reporte
+ * 
+ */
     @Inject
     private Reporte reporte;
     
