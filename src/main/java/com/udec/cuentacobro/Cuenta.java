@@ -12,15 +12,28 @@ import javax.inject.Inject;
 import javax.enterprise.context.ApplicationScoped;
 
 /**
- *
- * @author SuperUs
+ *Esta clase almacena datos 
+ * y se crean los get y set
+ * @author Edward Ramos
+ * @author Victor Preciado
  */
 //@Named(value = "cuenta")
 //@ApplicationScoped
 @Named
 @RequestScoped
 public class Cuenta {
-  
+   
+     /**
+    *Variables privadas que almacenan datos 
+    * que se reciben
+    * nombre guarda el nombre
+    * apellido guarda el apellido
+    * profesion guarda la profesion
+    * ubicacion guarda la ubicacion
+    * genero guarda el genero
+    * diasTrabajo guarda los dias trabajados
+    *  idioma guarda el idioma
+      */
     private String nombre;
     private String apellido;
     private int profesion;
