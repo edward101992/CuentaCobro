@@ -111,7 +111,11 @@ public class Logica {
         }
         return gen;
     }
-     
+       /**
+     * Metodo que devuelve un String segun el tipo de profesion
+     * del empleado
+     * @return profesioncobro
+     */
     public int cobroProfesion(){
         int profesioncobro;
         if(cuenta.getProfesion()==1){
