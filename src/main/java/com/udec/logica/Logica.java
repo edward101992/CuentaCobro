@@ -34,26 +34,45 @@ public class Logica {
     
     @Inject
     private Cuenta cuenta;
-
+    /**
+     * Constructor de la clase cuenta
+     */
     public Logica() {
     }
-    
+    /**
+     * variable get reporte
+     * @return reporte
+     */
     public Reporte getReporte() {
         return reporte;
     }
-
+    /**
+     * variable set reporte
+     * @param reporte 
+     */
     public void setReporte(Reporte reporte) {
         this.reporte = reporte;
     }
-
+   /**
+    * variable get cuenta
+    * @return cuenta
+    */
     public Cuenta getCuenta() {
         return cuenta;
     }
-
+    /**
+     * variable set cuenta
+     * @param cuenta 
+     */
     public void setCuenta(Cuenta cuenta) {
         this.cuenta = cuenta;
     }
-    
+    /**
+     * variables que se envian 
+     * por parametro
+     * @param reporte
+     * @param cuenta 
+     */
     public Logica(Reporte reporte, Cuenta cuenta){       
         this.cuenta = cuenta;
         this.reporte = reporte;       
@@ -129,7 +148,7 @@ public class Logica {
         }
         return profesioncobro;
     }
-       /**
+    /**
      * Metodo que devuelve un String segun el tipo de Idioma
      * del empleado
      * @return idiomacobro
@@ -147,7 +166,11 @@ public class Logica {
         }
         return idiomacobro;
     }
-    
+     /**
+     * Metodo que devuelve un String segun el tipo de Ubicacion
+     * del empleado
+     * @return ubicacioncobro
+     */
     public int cobroUbicacion(){
         int ubicacioncobro;
         if(cuenta.getUbicacion()==2){
@@ -157,7 +180,11 @@ public class Logica {
         }
         return ubicacioncobro;
     }
-    
+    /**
+     * este metodo calcula el cobro final
+     * operacion final
+     * @return cobrofinal
+     */
     public int cobroFinal(){
         int cobrofinal;
         cobrofinal=cuenta.getDiasTrabajo()*(cobroProfesion()+cobroIdioma()+cobroUbicacion());
