@@ -49,6 +49,11 @@ public class Logica {
         this.reporte = reporte;       
     }
       
+    /**
+     * Metodo que devuelve un String segun el tipo de profesion
+     * del empleado
+     * @return prof
+     */
     
     public String devolverProfesion(){
         int idprof=cuenta.getProfesion();

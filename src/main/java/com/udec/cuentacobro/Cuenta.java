@@ -28,9 +28,7 @@ public class Cuenta {
     private int genero;
     private int diasTrabajo;
     private String[] idioma;
-    
-    @Inject
-    private Reporte reporte;
+   
 
     
     @Inject
@@ -43,16 +41,7 @@ public class Cuenta {
     public void setLogica(Logica logica) {
         this.logica = logica;
     }
-    
-    public Reporte getReporte() {
-        return reporte;
-    }
-
-    public void setReporte(Reporte reporte) {
-        this.reporte = reporte;
-    }
       
-   
     public String getNombre() {
         return nombre;
     }
