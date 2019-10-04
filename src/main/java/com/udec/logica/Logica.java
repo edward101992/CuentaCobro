@@ -79,6 +79,11 @@ public class Logica {
         }
         return prof;
     }
+      /**
+     * Metodo que devuelve un String segun el tipo de ubicacion
+     * del empleado
+     * @return ubi
+     */
     public String devolverUbicacion(){ 
         int idubi = cuenta.getUbicacion();
         String ubi="ubi";      
@@ -89,7 +94,11 @@ public class Logica {
         }           
         return ubi;
     }
-    
+      /**
+     * Metodo que devuelve un String segun el tipo de genero
+     * del empleado
+     * @return gen
+     */
      public String devolverGenero(){ 
         int idgen = cuenta.getGenero();
         String gen="gen";
